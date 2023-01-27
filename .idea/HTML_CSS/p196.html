@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script type="text/javascript">
+function MyPostion(){
+if(navigator.geolocation){
+navigator.geolocation.getCurrentPosition(CurPosition);
+}
+}
+function CurPosition(position){
+var lat = position.coords.latitude;
+var lng = position.coords.longitude;
+document.getElementById("result").innerHTML = "위도:"+lat+"경도:"+lng;
+}
+</script>
+<button onclick = "MyPosition()" type ="button">나의 현재 위치</button><p>
+<div id = "result"></div>
+
+</body>
+</html>

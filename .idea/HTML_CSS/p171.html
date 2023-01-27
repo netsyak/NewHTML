@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<canvas id="myCanvas" width="600" height="400" style="border:3px solid"></canvas>
+<script type="text/javascript">
+        var ctx = document.getElementById("myCanvas");
+        var myContext = ctx.getContext("2d");
+
+        myContext.strokeRect(10,10,200,150); // 사각형의 선만 그림
+        myContext.fillRect(250,10,200,150);
+        myContext.fillRect(10,170,200,150);
+        myContext.clearRect(300,20,100,50); //사각 영역을 지움
+</script>
+</body>
+</html>

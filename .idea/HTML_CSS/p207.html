@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+    <script type="text/javascript" src="https://maps.google.com/maps/api/js?sensor=false"></script>
+    <title>Title</title>
+
+</head>
+<body>
+<script type="text/javascript">
+  var markerIcon = new google.map.MarkerImage("image/marker.jpg");
+
+  function MyPos()
+  {
+    if(navigator.geolocation)
+    {
+    navigator.geolocation.getCurrentPosition(CurPosition,ErrorCallback);
+    }
+    }
+    function CurPosition(posotion)
+    {
+    var lat = position.coords.latitude;
+    var lng = position.coords.longitude;
+    document.getElementById("result").innerHTML = "위도:"+lat+"경도:"+ lng;
+    var latlng = new google.maps.LatLng(lat,lng);
+    var option ={
+            zoom=15,
+            center:latlng
+            mapTypeId:google.maps.MapTypeId.ROADMAP
+            };
+    var map = new google.maps.Map(
+              document.getElementById("map"),options
+              );
+    var marker= new google.maps.Marker({
+              map:map,
+              icon : markerIcon,
+              title:"현재 위치"
+              position:latlag
+              });
+     }
+     function ErrorCallback(error)
+     {
+      switch(error.code)
+      {
+        case error.PERMISSION_DENIED:
+              document.getElementById("result").innerHTML ="현재 위치 정보에 대한 권한이 없습니다."; break;
+            case error.POSITION_UNAVAILABLE:
+               document.getElementById("result").innerHTML ="현재 위치 정보를 구할 수 없습니다."; break;
+            case error.TIMEOUT:
+               document.getElementById("result").innerHTML ="시간 제한을 초과했습니다."; break;
+}
+}
+
+
+
+</script>
+<button onclick="MyPosition()" type="button">나의 현재 위치</button>
+<p>
+<div id="result"></div>
+<div id="map" style="witch:500px; height:500px"></div>
+
+</body>
+</html>

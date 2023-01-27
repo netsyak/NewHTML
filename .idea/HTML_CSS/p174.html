@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+</head>
+<body>
+<canvas id="myCanvas" width ="600" height="400" style="border:3px solid"></canvas>
+<script type= "text/javascript">
+var ctx = document.getElementById("myCanvas");
+var myContext = ctx.getContext("2d");
+
+myContext.beginPath();
+myContext.moveTo(100,20);
+myContext.lineTo(40,120);
+myContext.lineTo(160,120);
+myContext.fill();
+
+myContext.moveTo(300,20);
+myContext.lineTo(200,60);
+myContext.lineTo(200,120);
+myContext.lineTo(400,120);
+myContext.lineTo(400,60);
+myContext.closePath();
+myContext.stroke();
+</script>
+
+</body>
+</html>

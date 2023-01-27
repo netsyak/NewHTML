@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>p182</title>
+
+</head>
+<body>
+<canvas id="myCanvas" width="600" height="400" style="border:3px solid">
+</canvas>
+<script tyep="text/javascript">
+  var ctx = document.getElementById("myCanvas");
+  var myContext = ctx.getContext("2d");
+
+  var gradient = myContext.createLinearGradient(0,0,100,0);
+  gradient.addColorStop(0,"white");
+  gradient.addColorStop(1,"blue");
+  myContext.fillStyle= gradient;
+  myContext.fillRect(10,10,100,100);
+
+  gradient = myContext.createLinearGradient(150,0,200,100);
+  gradient.addColorStop(0,"white");
+  gradient.addColorStop(1,"red");
+  myContext.fillStyle= gradient;
+  myContext.fillRect(200,10,100,100);
+
+
+</script>
+</body>
+</html>
