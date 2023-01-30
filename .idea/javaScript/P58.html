@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+  var stringValue = "hello world!";
+  alert(stringValue.slice(3));   //"lo world"  --
+  alert(stringValue.substring(3));   //"lo world"
+  (stringValue.substr(3));   //"lo world" (3번째 자리 이후 출력
+  alert(stringValue.slice(3,7));   //"lo w"  (3초과 7 미만 자리)
+  alert(stringValue.substring(3,7));   //"lo w"
+  alert(stringValue.substr(3,7));   //"lo worl"(3자리 부터 7자리 까지 출력)
+</script>
+</body>
+</html>

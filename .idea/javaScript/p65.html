@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+  <script>
+    function get(){
+    var val = document.getElementById("ex").innerHTML;
+    alert(val);
+    }
+    function set(v){
+    document.getElementById("ex").innerHTML = v;
+    }
+  </script>
+</head>
+<body>
+<div id ="ex">DIV declaration</div>
+  <a href="#" onclick="get()">Print the DIV attribute</a><br>
+  <a hret="#" onclick="set('changed.')">Change the DIV attribute</a><br>
+</body>
+</html>
