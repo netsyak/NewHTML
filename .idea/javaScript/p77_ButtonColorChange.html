@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+  <script>
+    function OnButtonDown(button){
+    button.style.color="#ff0000";
+    }
+    function OnButtonUp(button){
+    button.Style.color= "#00ff00";
+    }
+
+  </script>
+</head>
+<body>
+<button onmousetdown="OnButtonDown(this)"
+        onmouseup="OnButtonUp(this)">Press!</button>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+  <script>
+    function check_param(param){
+    var tname= param.value;
+    if(tname== ''){
+    alert('성명을 입력하세요.');
+    }else{
+    alert (tname);
+    }
+    }
+  </script>
+</head>
+<body>
+<form>
+  회 원 가 입<br>
+  성 명<input type ="text" id="tname" name="name"/><br>
+  생년월일<input type="text" id="tbirth" name="birth"/><br>
+  <input type ="button" value="확인" onclick="check_param(document.getElementById('tname'))"/>
+</form>
+</body>
+</html>
